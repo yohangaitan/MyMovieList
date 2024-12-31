@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <h1 class="text-info">{{pelicula.titulo}}</h1>
+
+            {{error}}
+        
+            
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary">
+                    actualizar
+                </button>
+            </form>
+            
+            <form action="{% url 'borrar_pelicula' pelicula.id %}"method="POST">
+                {% csrf_token %}
+                <button class="btn btn-danger">
+                    borrar
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+    
+
+{% endblock %}

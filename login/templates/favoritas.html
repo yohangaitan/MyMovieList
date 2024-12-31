@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritas</title>
+</head>
+<body>
+
+    <h2>Favoritas</h2>
+    <div id="favorite-movies"></div>
+
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', () => {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const favoriteMoviesContainer = document.getElementById('favorite-movies');
+
+            if (favorites.length === 0) {
+                favoriteMoviesContainer.innerHTML = '<p>No tienes películas favoritas aún.</p>';
+            } else {
+                favorites.forEach(title => {
+                    const movieDiv = document.createElement('div');
+                    movieDiv.textContent = title;
+                    favoriteMoviesContainer.appendChild(movieDiv);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+    {% endblock %}

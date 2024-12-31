@@ -1,0 +1,8 @@
+.pelicula-imagen {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */ 
+    width: 300px; /* Anchura fija si prefieres */ 
+    height: 200px; /* Altura fija si prefieres */ 
+    object-fit: cover; /* Recorta la imagen para que se ajuste al tamaño especificado */ }

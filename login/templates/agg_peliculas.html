@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+
+         
+            
+            <form action="/peliculas/create/" method="POST" class="card card-body" enctype="multipart/form-data">
+                <h1 class="text-info">Añadir Película</h1>
+    
+                {{error}}
+                {% csrf_token %}
+        
+                {{form}}
+                <button class="btn btn-primary">
+                    guardar
+                </button>
+        
+        
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
