@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "peliculas_fav/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "peliculas_fav/wsgi.py"
+      }
+    ]
+  }
+  
