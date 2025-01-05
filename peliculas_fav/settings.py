@@ -128,3 +128,5 @@ import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STATIC_URL = '/static/' # URL para acceder a los archivos estáticos
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Directorio donde se almacenarán los archivos estáticos
