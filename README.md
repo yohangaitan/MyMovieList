@@ -1,2 +1,3 @@
 # MyMovieList
-Este proyecto hecho en Django es un proyecto donde puedes guardar tus peliculas favoritas añadiendo imagen y reseña a cada película.
+En esta aplicacion web puedes guardar tus peliculas favoritas añadiendo imagen y reseña a cada película.
+se uso Python con el framework DJango, HTML y BootStrap
